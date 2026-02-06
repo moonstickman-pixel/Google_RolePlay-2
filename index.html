@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VelvetCore // EREBOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://js.puter.com/v2/"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Cinzel', 'serif'],
+              display: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              background: '#030303', // Void black
+              surface: '#0a0a0a',    // Deep surface
+              'surface-highlight': '#121212',
+              primary: '#ea580c',    // Burnt Orange
+              'primary-bright': '#f97316', // Bright Orange
+              'glow': 'rgba(234, 88, 12, 0.5)'
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(234, 88, 12, 0.15)',
+              'glow-sm': '0 0 10px rgba(234, 88, 12, 0.1)',
+              'glow-lg': '0 0 40px rgba(234, 88, 12, 0.25)',
+              'inner-glow': 'inset 0 0 20px rgba(234, 88, 12, 0.05)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'modal-enter': 'modalEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up-fade': 'slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              modalEnter: {
+                '0%': { opacity: '0', transform: 'scale(0.96) translateY(10px)' },
+                '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUpFade: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030303; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ea580c; 
+      }
+      body {
+        background-color: #030303;
+        color: #e5e5e5;
+        font-family: 'Inter', sans-serif;
+      }
+      .font-cinzel {
+        font-family: 'Cinzel', serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
